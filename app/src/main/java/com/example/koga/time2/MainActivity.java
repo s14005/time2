@@ -31,7 +31,7 @@ public class MainActivity extends Activity {
         btn3=(Button)findViewById(R.id.stop);
         cdt = new MyCountDownTimer(30*1000, 100);
         cdt.start();
-        setTButton();
+       /* setTButton();*/
 
         Button btn1 = (Button)findViewById(R.id.start);
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
                 cdt.cancel();
                 cdt = new MyCountDownTimer(30 * 1000, 100);
                 cdt.start();
-                setTButton(); //・・・【2】
+                /*setTButton();*/ //・・・【2】
             }
         });
 
@@ -60,7 +60,7 @@ public class MainActivity extends Activity {
 
                 cdt.cancel();
                 time.setText("カウントダウン終了");
-                stopButton(); //・・・【3】
+               /* stopButton(); //・・・【3】*/
             }
         });
 
@@ -75,7 +75,7 @@ public class MainActivity extends Activity {
         @Override
         public void onFinish() {
             time.setText("カウントダウン終了");
-            stopButton(); //・・・【4】
+            /*stopButton(); //・・・【4】*/
         }
         @Override
         public void onTick(long millisUntilFinished) {
@@ -86,7 +86,7 @@ public class MainActivity extends Activity {
             }
         }
     }
-    private void setTButton(){ //・・・【5】
+    /*private void setTButton(){ //・・・【5】
         btn3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 btn3.setText("再開");
@@ -94,9 +94,9 @@ public class MainActivity extends Activity {
                 setSButton();
             }
         });
-    }
+    }*/
 
-    private void setSButton(){ //・・・【6】
+   /* private void setSButton(){ //・・・【6】
         btn3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 btn3.setText("一時停止");
@@ -107,13 +107,13 @@ public class MainActivity extends Activity {
                 cdt.start();
             }
         });
-    }
-    private void stopButton(){ //・・・【7】
+    }*/
+   /* private void stopButton(){ //・・・【7】
         btn3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
             }
         });
-    }
+    }*/
 
 }
